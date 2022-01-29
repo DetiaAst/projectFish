@@ -1,6 +1,7 @@
 package com.example.fish;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,16 @@ public class AllFishAdapter extends RecyclerView.Adapter<AllFishAdapter.AllFishH
     public void onBindViewHolder(@NonNull AllFishHolder holder, int position) {
         holder.txtAllFish.setText(semuaFishnya.get(position).getSpeciesName());
         Picasso.with(activity).load(semuaFishnya.get(position).getFishPicture().getSrc()).into(holder.imgFishUtama);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AllFish sebuahIkan=semuaFishnya.get(position);
+                Intent kirim=new Intent(activity,DetailActivity.class);
+                kirim.putExtra("paket",sebuahIkan);
+                v.getContext().startActivity(kirim);
+
+            }
+        });
     }
 
     @Override

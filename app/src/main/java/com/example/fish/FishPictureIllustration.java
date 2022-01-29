@@ -1,6 +1,8 @@
 package com.example.fish;
 
-public class FishPictureIllustration {
+import java.io.Serializable;
+
+public class FishPictureIllustration implements Serializable {
     private String src;
     private String alt;
 

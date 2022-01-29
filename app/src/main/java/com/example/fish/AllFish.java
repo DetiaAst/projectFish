@@ -3,7 +3,11 @@ package com.example.fish;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class AllFish {
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AllFish implements Serializable {
     @SerializedName("Species Illustration Photo")
     @Expose
     private FishPictureIllustration fishPicture;
@@ -44,6 +48,54 @@ public class AllFish {
     @Expose
     private  String Bycatch;
 
+    @SerializedName("Calories")
+    @Expose
+    private  String Calories;
+
+    @SerializedName("Cholesterol")
+    @Expose
+    private  String Cholesterol;
+
+    @SerializedName("Carbohydrate")
+    @Expose
+    private String Carbohydrate;
+
+    @SerializedName("Fat, Total")
+    @Expose
+    private String fatTotal;
+
+    @SerializedName("Harvest")
+    @Expose
+    private  String Harvest;
+
+    @SerializedName("Health Benefits")
+    @Expose
+    private  String HealthBenefits;
+
+    @SerializedName("Physical Description")
+    @Expose
+    private String PhysicalDescription;
+
+    @SerializedName("Protein")
+    @Expose
+    private String Protein;
+
+    @SerializedName("Quote")
+    @Expose
+    private  String Quote;
+
+    @SerializedName("Saturated Fatty Acids, Total")
+    @Expose
+    private  String SaturatedFattyAcidsTotal ;
+
+    @SerializedName("Image Gallery")
+    @Expose
+    private ArrayList<Gallery> imageGallery=null;
+
+    public List<Gallery> getImageGallery() {
+        return imageGallery;
+    }
+
     public String getScientificName() {
         return ScientificName;
     }
@@ -74,5 +126,53 @@ public class AllFish {
 
     public String getSpeciesName() {
         return speciesName;
+    }
+
+    public String getBiology() {
+        return Biology;
+    }
+
+    public String getBycatch() {
+        return Bycatch;
+    }
+
+    public String getCalories() {
+        return Calories;
+    }
+
+    public String getCholesterol() {
+        return Cholesterol;
+    }
+
+    public String getCarbohydrate() {
+        return Carbohydrate;
+    }
+
+    public String getFatTotal() {
+        return fatTotal;
+    }
+
+    public String getHarvest() {
+        return Harvest;
+    }
+
+    public String getHealthBenefits() {
+        return HealthBenefits;
+    }
+
+    public String getPhysicalDescription() {
+        return PhysicalDescription;
+    }
+
+    public String getProtein() {
+        return Protein;
+    }
+
+    public String getQuote() {
+        return Quote;
+    }
+
+    public String getSaturatedFattyAcidsTotal() {
+        return SaturatedFattyAcidsTotal;
     }
 }

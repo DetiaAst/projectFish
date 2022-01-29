@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<AllFish>> call, Throwable t) {
-
+                Toast.makeText(MainActivity.this,"tidak dapat data",Toast.LENGTH_LONG).show();
             }
         });
 
