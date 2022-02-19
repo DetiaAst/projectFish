@@ -17,9 +17,9 @@ import java.util.List;
 
 public class AllFishAdapter extends RecyclerView.Adapter<AllFishAdapter.AllFishHolder>{
     Activity activity;
-    List<AllFish> semuaFishnya;
+    List<AllFishKecil> semuaFishnya;
 
-    public AllFishAdapter(Activity activity, List<AllFish> semuaFishnya) {
+    public AllFishAdapter(Activity activity, List<AllFishKecil> semuaFishnya) {
         this.activity = activity;
         this.semuaFishnya = semuaFishnya;
     }
@@ -38,10 +38,15 @@ public class AllFishAdapter extends RecyclerView.Adapter<AllFishAdapter.AllFishH
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AllFish sebuahIkan=semuaFishnya.get(position);
-                Intent kirim=new Intent(activity,DetailActivity.class);
-                kirim.putExtra("paket",sebuahIkan);
+                String namaIkan, namaIkanEdit;
+                namaIkan=semuaFishnya.get(position).getSpeciesName();
+                namaIkanEdit=namaIkan.replaceAll(" ", "-").toLowerCase();
+                Intent kirim=new Intent(activity, DetailActivity.class);
+                kirim.putExtra("paket",namaIkanEdit);
                 v.getContext().startActivity(kirim);
+
+
+
 
             }
         });

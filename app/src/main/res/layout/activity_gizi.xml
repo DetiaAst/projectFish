@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    tools:context=".Gizi">
+
+    <TextView
+        android:id="@+id/judulGizi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="#EFDA1D"
+        android:gravity="center"
+        android:text="Informasi Nilai Gizi"
+        android:textSize="15pt"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtpt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Protein :"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulGizi" />
+
+    <TextView
+        android:id="@+id/txt_protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="protein"
+        android:textSize="10pt"
+        app:layout_constraintStart_toEndOf="@+id/txtpt"
+        app:layout_constraintTop_toBottomOf="@+id/judulGizi" />
+
+    <TextView
+        android:id="@+id/txtcl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Calories :"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@+id/txtpt"
+        app:layout_constraintTop_toBottomOf="@+id/txtpt" />
+
+    <TextView
+        android:id="@+id/txt_Calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Calories :"
+        android:textSize="10pt"
+        app:layout_constraintStart_toEndOf="@+id/txtcl"
+        app:layout_constraintTop_toBottomOf="@+id/txt_protein" />
+
+    <TextView
+        android:id="@+id/txtcole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Cholesterol :"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@+id/txtCarbohydrate"
+        app:layout_constraintTop_toBottomOf="@+id/txtCarbohydrate" />
+
+    <TextView
+        android:id="@+id/txt_Cholesterol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="cole"
+        android:textSize="10pt"
+        app:layout_constraintStart_toEndOf="@+id/txtcole"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Carbohydrate" />
+
+    <TextView
+        android:id="@+id/txtCarbohydrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Carbohydrate :"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="@+id/txtcl"
+        app:layout_constraintTop_toBottomOf="@+id/txtcl" />
+
+    <TextView
+        android:id="@+id/txt_Carbohydrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="carbo"
+        android:textSize="10pt"
+        app:layout_constraintStart_toEndOf="@+id/txtCarbohydrate"
+        app:layout_constraintTop_toBottomOf="@+id/txtcl" />
+
+    <Button
+        android:id="@+id/btnGZ"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:text="View more. . ."
+        android:background="@drawable/btn5"
+       android:paddingBottom="20dp"
+        android:textStyle="bold"
+        android:textSize="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Carbohydrate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

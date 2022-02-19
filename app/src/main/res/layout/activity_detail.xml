@@ -1,121 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/txt_biology"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:background="@color/putih"
+        android:paddingLeft="8dp"
+        tools:context=".DetailActivity">
 
-    <TextView
-        android:id="@+id/txt_habitat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_biology" />
-
-    <TextView
-        android:id="@+id/txt_habitatImpact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_habitat" />
-
-    <TextView
-        android:id="@+id/txt_nfr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_population" />
-
-    <TextView
-        android:id="@+id/txt_population"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_sn" />
-
-    <TextView
-        android:id="@+id/txt_sn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Bycatch" />
-
-    <TextView
-        android:id="@+id/txt_Bycatch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Calories" />
-
-    <TextView
-        android:id="@+id/txt_Calories"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Cholesterol" />
-
-    <TextView
-        android:id="@+id/txt_Cholesterol"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Carbohydrate" />
-
-    <TextView
-        android:id="@+id/txt_Carbohydrate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_fatTotal" />
-
-    <TextView
-        android:id="@+id/txt_fatTotal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="xxxxxxxxxxxxxx"
-        android:textSize="10pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_habitatImpact" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="#58EC5E"
+            android:gravity="center"
+            android:text="DETAIL"
+            android:textColor="@color/black"
+            android:textSize="12pt"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <WebView
+            android:id="@+id/web_habitat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="habi"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/web_hb" />
+
+        <TextView
+            android:id="@+id/txt_sfat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_x="0dp"
+            android:layout_y="-7dp"
+            android:text="sfat"
+            android:textColor="@color/black"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <WebView
+            android:id="@+id/web_habitatImpact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="habim"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/web_habitat" />
+
+        <TextView
+            android:id="@+id/txt_nfr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nfr"
+            android:textColor="@color/black"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_sn" />
+
+
+        <TextView
+            android:id="@+id/txt_population"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="popu"
+            android:textColor="@color/black"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_quote" />
+
+        <TextView
+            android:id="@+id/txt_sn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sn"
+            android:textColor="@color/black"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_sfat" />
+
+        <WebView
+            android:id="@+id/web_hb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hb"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Bycatch"/>
+
+        <WebView
+            android:id="@+id/web_biology"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_x="-30dp"
+            android:layout_y="3dp"
+            android:text="bio"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/web_pd" />
+
+
+        <WebView
+            android:id="@+id/web_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="location"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/web_biology" />
+
+        <WebView
+            android:id="@+id/web_pd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pd"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/web_habitatImpact" />
+
+        <TextView
+            android:id="@+id/txt_Bycatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bycatcj"
+            android:textColor="@color/black"
+            android:textSize="10pt"
+            app:layout_constraintTop_toBottomOf="@+id/txt_population"
+            tools:layout_editor_absoluteX="-8dp" />
+
+        <TextView
+            android:id="@+id/txt_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="quote"
+            android:textColor="@color/black"
+            android:textSize="10pt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nfr" />
+
+        <Button
+            android:id="@+id/btnDet"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn5"
+            android:text="View more . . ."
+            android:paddingBottom="20dp"
+            android:textStyle="bold"
+            android:textSize="19dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/web_location" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

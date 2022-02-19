@@ -52,8 +52,7 @@ public class AllFish implements Serializable {
     @Expose
     private  String Calories;
 
-    @SerializedName("Cholesterol")
-    @Expose
+
     private  String Cholesterol;
 
     @SerializedName("Carbohydrate")
@@ -64,8 +63,7 @@ public class AllFish implements Serializable {
     @Expose
     private String fatTotal;
 
-    @SerializedName("Harvest")
-    @Expose
+
     private  String Harvest;
 
     @SerializedName("Health Benefits")
@@ -76,8 +74,7 @@ public class AllFish implements Serializable {
     @Expose
     private String PhysicalDescription;
 
-    @SerializedName("Protein")
-    @Expose
+
     private String Protein;
 
     @SerializedName("Quote")
@@ -88,13 +85,9 @@ public class AllFish implements Serializable {
     @Expose
     private  String SaturatedFattyAcidsTotal ;
 
-    @SerializedName("Image Gallery")
-    @Expose
-    private ArrayList<Gallery> imageGallery=null;
 
-    public List<Gallery> getImageGallery() {
-        return imageGallery;
-    }
+
+
 
     public String getScientificName() {
         return ScientificName;
