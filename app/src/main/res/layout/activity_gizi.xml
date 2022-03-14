@@ -7,6 +7,46 @@
     android:paddingLeft="10dp"
     tools:context=".Gizi">
 
+    <ImageView
+        android:id="@+id/imgProtein"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/logopro"
+        app:layout_constraintEnd_toStartOf="@+id/imgChalo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulGizi" />
+
+    <ImageView
+        android:id="@+id/imgChalo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/logocal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgProtein"
+        app:layout_constraintTop_toBottomOf="@+id/judulGizi" />
+
+    <ImageView
+        android:id="@+id/imgCarbo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/logocarbo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgChole"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Calories" />
+
+    <ImageView
+        android:id="@+id/imgChole"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/cho2"
+        app:layout_constraintEnd_toStartOf="@+id/imgCarbo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpt" />
+
     <TextView
         android:id="@+id/judulGizi"
         android:layout_width="match_parent"
@@ -19,6 +59,7 @@
         android:textSize="15pt"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,99 +67,101 @@
         android:id="@+id/txtpt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="Protein :"
         android:textSize="10pt"
+        app:layout_constraintEnd_toStartOf="@+id/txt_protein"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judulGizi" />
+        app:layout_constraintTop_toBottomOf="@+id/imgProtein" />
 
     <TextView
         android:id="@+id/txt_protein"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="protein"
         android:textSize="10pt"
+        app:layout_constraintEnd_toStartOf="@+id/txtcl"
         app:layout_constraintStart_toEndOf="@+id/txtpt"
-        app:layout_constraintTop_toBottomOf="@+id/judulGizi" />
+        app:layout_constraintTop_toBottomOf="@+id/imgProtein" />
 
     <TextView
         android:id="@+id/txtcl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="Calories :"
         android:textSize="10pt"
-        app:layout_constraintStart_toStartOf="@+id/txtpt"
-        app:layout_constraintTop_toBottomOf="@+id/txtpt" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_Calories"
+        app:layout_constraintStart_toEndOf="@+id/txt_protein"
+        app:layout_constraintTop_toBottomOf="@+id/imgChalo" />
 
     <TextView
         android:id="@+id/txt_Calories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
         android:text="Calories :"
         android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtcl"
-        app:layout_constraintTop_toBottomOf="@+id/txt_protein" />
+        app:layout_constraintTop_toBottomOf="@+id/imgChalo" />
 
     <TextView
         android:id="@+id/txtcole"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="Cholesterol :"
         android:textSize="10pt"
-        app:layout_constraintStart_toStartOf="@+id/txtCarbohydrate"
-        app:layout_constraintTop_toBottomOf="@+id/txtCarbohydrate" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgChole" />
 
     <TextView
         android:id="@+id/txt_Cholesterol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="cole"
         android:textSize="10pt"
         app:layout_constraintStart_toEndOf="@+id/txtcole"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Carbohydrate" />
+        app:layout_constraintTop_toBottomOf="@+id/imgChole" />
 
     <TextView
         android:id="@+id/txtCarbohydrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="Carbohydrate :"
         android:textSize="10pt"
-        app:layout_constraintStart_toStartOf="@+id/txtcl"
-        app:layout_constraintTop_toBottomOf="@+id/txtcl" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_Carbohydrate"
+        app:layout_constraintStart_toEndOf="@+id/txt_Cholesterol"
+        app:layout_constraintTop_toBottomOf="@+id/imgCarbo" />
 
     <TextView
         android:id="@+id/txt_Carbohydrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="carbo"
         android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtCarbohydrate"
-        app:layout_constraintTop_toBottomOf="@+id/txtcl" />
+        app:layout_constraintTop_toBottomOf="@+id/imgCarbo" />
 
     <Button
         android:id="@+id/btnGZ"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:layout_marginTop="100dp"
-        android:text="View more. . ."
+        android:layout_marginTop="150dp"
         android:background="@drawable/btn5"
-       android:paddingBottom="20dp"
-        android:textStyle="bold"
+        android:paddingBottom="20dp"
+        android:text="View more. . ."
         android:textSize="19dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Carbohydrate" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCarbohydrate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

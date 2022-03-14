@@ -8,7 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -22,6 +25,7 @@ public class DetailActivity extends AppCompatActivity {
     String namaIkannya;
     TextView txtNfr,txtPopulation,txtSn,txtBycatch,txtQuote,txtSfat;
     WebView webBiologi,webHabitat,webHabitatImpacts,webLocation,webHb,webPhysicalDescription;
+    ImageView imgIkan;
     Button btnDet;
     ApiInterface apiInterface;
 
@@ -34,6 +38,7 @@ public class DetailActivity extends AppCompatActivity {
         webHabitat=(WebView) findViewById(R.id.web_habitat);
         webHabitatImpacts=(WebView)findViewById(R.id.web_habitatImpact);
         webLocation=(WebView)findViewById(R.id.web_location);
+        imgIkan=(ImageView) findViewById(R.id.imageView_detail);
 
         btnDet=(Button) findViewById(R.id.btnDet);
 
@@ -56,7 +61,7 @@ public class DetailActivity extends AppCompatActivity {
                 ikanKirimanMentah=response.body();
                 ikanKiriman=ikanKirimanMentah.get(0);
                 String biologi = ikanKiriman.getBiology();
-
+                Picasso.with(DetailActivity.this).load(ikanKiriman.getFishPicture().getSrc()).into(imgIkan);
                 webBiologi.getSettings().getJavaScriptEnabled();
                 webBiologi.loadData(String.format(biologi), "text/html", "utf-8");
 

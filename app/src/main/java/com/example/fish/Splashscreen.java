@@ -1,3 +1,4 @@
+
 package com.example.fish;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +7,12 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.example.fish.AllFishKecil;
+import com.example.fish.ApiClient;
+import com.example.fish.ApiInterface;
+import com.example.fish.MainActivity;
+import com.example.fish.R;
 
 import java.io.Serializable;
 import java.util.List;
@@ -32,13 +39,13 @@ public class Splashscreen extends AppCompatActivity {
         }
         @Override
         protected Void doInBackground(Void... voids) {
-            apiInterface=ApiClient.ambilFish().create(ApiInterface.class);
+            apiInterface= ApiClient.ambilFish().create(ApiInterface.class);
             Call<List<AllFishKecil>> listCall=apiInterface.getListFish();
             listCall.enqueue(new Callback<List<AllFishKecil>>() {
                 @Override
                 public void onResponse(Call<List<AllFishKecil>> call, Response<List<AllFishKecil>> response) {
                     allFish=response.body();
-                    Intent kirimIkan = new Intent(Splashscreen.this,MainActivity.class);
+                    Intent kirimIkan = new Intent(Splashscreen.this, MainActivity.class);
                     kirimIkan.putExtra("ikannya", (Serializable) allFish);
                     startActivity(kirimIkan);
                     finish();
